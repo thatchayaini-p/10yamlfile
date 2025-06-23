@@ -1,0 +1,9 @@
+on:
+  workflow_call:
+
+jobs:
+  deploy:
+    environment: production
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Deploying to prod"
