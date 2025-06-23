@@ -1,0 +1,9 @@
+jobs:
+  call-child-1:
+    uses: ./.github/workflows/child.yml
+    with:
+      message: "Child 1"
+  call-child-2:
+    uses: ./.github/workflows/child.yml
+    with:
+      message: "Child 2"
