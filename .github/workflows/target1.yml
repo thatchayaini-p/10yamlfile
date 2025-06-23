@@ -1,0 +1,13 @@
+name: Target
+on:
+  workflow_dispatch:
+    inputs:
+      user:
+        required: true
+        type: string
+
+jobs:
+  say-hello:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Hello ${{ github.event.inputs.user }}"
