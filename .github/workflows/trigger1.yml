@@ -1,0 +1,9 @@
+on:
+  schedule:
+    - cron: '0 * * * *'
+
+jobs:
+  call:
+    uses: ./.github/workflows/child.yml
+    with:
+      message: "Hourly Trigger"
