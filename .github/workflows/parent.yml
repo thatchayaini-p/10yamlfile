@@ -1,3 +1,4 @@
+# .github/workflows/parent.yml
 name: Parent Workflow
 on:
   push:
@@ -7,4 +8,4 @@ jobs:
   call-child:
     uses: ./.github/workflows/child.yml
     with:
-      message: "Hello from Parent!"
+      name: "Thatchayaini"
