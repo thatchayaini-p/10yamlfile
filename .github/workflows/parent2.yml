@@ -1,0 +1,19 @@
+on:
+  push:
+    branches: [main]
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    outputs:
+      run_next: ${{ steps.decision.outputs.run_next }}
+    steps:
+      - id: decision
+        run: echo "run_next=true" >> $GITHUB_OUTPUT
+
+  call-child:
+    needs: check
+    if: needs.check.outputs.run_next == 'true'
+    uses: ./.github/workflows/child.yml
+    with:
+      message: "Condition met"
