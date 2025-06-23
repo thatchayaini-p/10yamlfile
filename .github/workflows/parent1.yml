@@ -1,0 +1,10 @@
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Build complete"
+  call-child:
+    needs: build
+    uses: ./.github/workflows/child.yml
+    with:
+      message: "Build finished!"
