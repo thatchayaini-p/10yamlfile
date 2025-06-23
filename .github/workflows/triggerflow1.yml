@@ -1,0 +1,6 @@
+steps:
+  - name: Trigger workflow with gh CLI
+    run: |
+      gh workflow run target.yml --ref main --field user=Thatchayaini
+    env:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
