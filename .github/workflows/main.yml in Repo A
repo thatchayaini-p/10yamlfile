@@ -1,0 +1,5 @@
+jobs:
+  call-other-repo-workflow:
+    uses: owner/repo/.github/workflows/workflow.yml@main
+    with:
+      message: "Cross-repo trigger"
